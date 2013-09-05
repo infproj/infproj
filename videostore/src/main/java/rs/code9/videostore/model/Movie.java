@@ -2,6 +2,7 @@ package rs.code9.videostore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -29,11 +30,42 @@ public class Movie extends AbstractBaseEntity {
 	
 	@NotEmpty(message = "This field is required!")
 	private int stock;
+	
+	
+	private Admin admin;
+	
+	
+	private User user;
+
+	@ManyToMany
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+	@ManyToMany
+	public Admin getAdmin() {
+		return admin;
+	}
+
+
+
+	public void setAdmin(Admin admin) {
+		this.admin = admin;
+	}
+
+
 
 	@Column(name = "name")
 	public String getName() {
 		return name;
 	}
+	
+	
 
 	public void setName(String name) {
 		this.name = name;
