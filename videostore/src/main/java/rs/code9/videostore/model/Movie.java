@@ -1,17 +1,36 @@
 package rs.code9.videostore.model;
 
-public class Movie {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+@Entity
+@Table(name = "movie")
+public class Movie extends AbstractBaseEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5631695248497327122L;
+
+	@NotEmpty(message = "This field is required!")
 	private String name;
 	
+	@NotEmpty(message = "This field is required!")
 	private String genre;
 	
+	@NotEmpty(message = "This field is required!")
 	private String descripiton;
 	
+	@NotEmpty(message = "This field is required!")
 	private int year;
 	
-	private int counter;
+	@NotEmpty(message = "This field is required!")
+	private int stock;
 
+	@Column(name = "name")
 	public String getName() {
 		return name;
 	}
@@ -20,6 +39,7 @@ public class Movie {
 		this.name = name;
 	}
 
+	@Column(name = "genre")
 	public String getGenre() {
 		return genre;
 	}
@@ -28,6 +48,7 @@ public class Movie {
 		this.genre = genre;
 	}
 
+	@Column(name = "description")
 	public String getDescripiton() {
 		return descripiton;
 	}
@@ -36,6 +57,8 @@ public class Movie {
 		this.descripiton = descripiton;
 	}
 
+	
+	@Column(name = "year")
 	public int getYear() {
 		return year;
 	}
@@ -44,12 +67,13 @@ public class Movie {
 		this.year = year;
 	}
 
-	public int getCounter() {
-		return counter;
+	@Column(name = "stock")
+	public int getStock() {
+		return stock;
 	}
 
-	public void setCounter(int counter) {
-		this.counter = counter;
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
 	
 	
