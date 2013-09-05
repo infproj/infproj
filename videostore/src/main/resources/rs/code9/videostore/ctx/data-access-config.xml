@@ -45,5 +45,5 @@
 	 
 	 <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager" /> 
 	 
-	 <!-- <jpa:repositories base-package="rs.code9.videostore.repository" /> -->
+	 <jpa:repositories base-package="rs.code9.videostore.repository" /> 
 </beans>
