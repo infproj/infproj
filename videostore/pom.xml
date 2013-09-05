@@ -1,22 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.levi9.project</groupId>
-  <artifactId>videostore</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>videostore Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-  <properties>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.levi9.project</groupId>
+	<artifactId>videostore</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>videostore Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
 		<org.springframework.version>3.1.0.RELEASE</org.springframework.version>
 		<org.slf4j.version>1.6.4</org.slf4j.version>
 		<ch.qos.logback.version>1.0.0</ch.qos.logback.version>
 		<org.apache.tiles.version>2.2.2</org.apache.tiles.version>
 		<hibernate.version>4.1.1.Final</hibernate.version>
 	</properties>
-  <dependencies>
-    	<!-- Spring -->
+
+	<dependencies>
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -151,11 +152,13 @@
 			<version>${hibernate.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-  </dependencies> 
-  
-  <build>
-    <finalName>videostore</finalName>
-    <plugins>
+		
+
+	</dependencies>
+
+	<build>
+		<finalName>videostore</finalName>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -166,5 +169,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-  </build>
+	</build>
 </project>

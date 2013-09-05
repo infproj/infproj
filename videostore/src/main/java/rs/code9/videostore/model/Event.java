@@ -4,9 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -14,6 +17,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "event")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="event_type", discriminatorType=DiscriminatorType.STRING,length=20)
 public class Event extends AbstractBaseEntity implements Serializable {
 	
 
@@ -29,7 +33,7 @@ public class Event extends AbstractBaseEntity implements Serializable {
 	
 	private Date dateTime;
 
-	@Column(name = "user")
+	@OneToOne
 	public User getUser() {
 		return user;
 	}
@@ -38,7 +42,7 @@ public class Event extends AbstractBaseEntity implements Serializable {
 		this.user = user;
 	}
 	
-	@Column(name = "movie")
+	@OneToOne
 	public Movie getMovie() {
 		return movie;
 	}
@@ -57,8 +61,4 @@ public class Event extends AbstractBaseEntity implements Serializable {
 		this.dateTime = dateTime;
 	}
 	
-	
-	
-	
-
 }

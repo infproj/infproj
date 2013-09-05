@@ -17,7 +17,7 @@ public class Archive extends AbstractBaseEntity {
 	 */
 	private static final long serialVersionUID = -1575217395344765327L;
 	
-	private Event event;
+	private String event;
 	
 	private String state;
 	
@@ -26,11 +26,11 @@ public class Archive extends AbstractBaseEntity {
 	private String comment;
 
 	@Column(name = "event")
-	public Event getEvent() {
+	public String getEvent() {
 		return event;
 	}
 
-	public void setEvent(Event event) {
+	public void setEvent(String event) {
 		this.event = event;
 	}
 

@@ -17,7 +17,7 @@ public class Taken extends Event {
 	
 	private Date returnTime;
 
-	@Column(name = "return time")
+	@Column(name = "return_time")
 	@Temporal(TemporalType.TIMESTAMP)
 	public Date getReturnTime() {
 		return returnTime;
