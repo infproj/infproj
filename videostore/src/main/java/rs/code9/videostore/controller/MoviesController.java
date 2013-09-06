@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.Assert;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import rs.code9.videostore.model.Movie;
+import rs.code9.videostore.model.User;
 import rs.code9.videostore.service.MovieService;
 
 @Controller
@@ -26,7 +28,16 @@ public class MoviesController {
 	public String showMovie(Model model,@PathVariable("id") long id) {
 		model.addAttribute("movie", service.getMovieById(id));
 		return ("editMovies");
+		
 	}
+	
+	@RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
+	public String updateMovie(@ModelAttribute("movie") Movie movie, @PathVariable("id") long id) {
+		Assert.state(id == movie.getId(), "Correct ID on submission.");
+		service.updateMovie(movie);
+		return ("redirect:/admin");
+	}
+	
 	
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	public String deleteMovie(Model model,@PathVariable("id") long id) {

@@ -45,6 +45,12 @@ public class MovieServiceImpl implements MovieService {
 		
 		return eRepository.save(event);
 	}
+
+	@Override
+	public Movie updateMovie(Movie movie) {
+		
+		return repository.save(movie);
+	}
 	
 
 }
