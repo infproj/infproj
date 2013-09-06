@@ -15,7 +15,11 @@
 	<definition name="home" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/home.jsp" />
 	</definition>
-
+	
+	<definition name="edit" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/users/edit.jsp" />
+	</definition>
+	
 	<definition name="leftMenu" template="/WEB-INF/jsp/layout/leftMenu.jsp">
 		<put-list-attribute name="leftMenuItems">
 			<item link="home" value="menu.left.item.home.caption" />
