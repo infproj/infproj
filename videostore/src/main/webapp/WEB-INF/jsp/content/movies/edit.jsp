@@ -30,6 +30,14 @@
 		<form:input path="name" />
 		<form:errors path="name" cssClass="error" />
 		<br />
+		<form:label path="stock">Stock:</form:label>
+		<form:input path="stock" />
+		<form:errors path="stock" cssClass="error" />
+		<br />
+		<form:label path="year">Year:</form:label>
+		<form:input path="year" />
+		<form:errors path="year" cssClass="error" />
+		<br />
 		
 		<input type="submit" value="Submit" />
 		
