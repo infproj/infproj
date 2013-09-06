@@ -15,6 +15,11 @@
 	<definition name="home" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/home.jsp" />
 	</definition>
+	
+	<definition name="admin" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/admin.jsp" />
+		<put-attribute name="leftMenu" value="leftMenuAdmin" />
+	</definition>
 
 	<definition name="leftMenu" template="/WEB-INF/jsp/layout/leftMenu.jsp">
 		<put-list-attribute name="leftMenuItems">
@@ -23,6 +28,16 @@
 			<item link="reservations" value="menu.left.item.reservations.caption" />
 			<item link="myProfile" value="menu.left.item.myProfile.caption" />
 			<item link="contact" value="menu.left.item.contact.caption" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="leftMenuAdmin" template="/WEB-INF/jsp/layout/leftMenu.jsp">
+		<put-list-attribute name="leftMenuItems">
+			<item link="home" value="menu.left.item.home.admin.caption" />
+			<item link="about" value="menu.left.item.newMovie.admin.caption" />
+			<item link="reservations" value="menu.left.item.newAdmin.admin.caption" />
+			<item link="myProfile" value="menu.left.item.myProfile.admin.caption" />
+			<item link="contact" value="menu.left.item.contact.admin.caption" />
 		</put-list-attribute>
 	</definition>
 
