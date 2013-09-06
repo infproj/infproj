@@ -31,7 +31,7 @@
 		<form:errors path="email" cssClass="error" />
 		<br />
 		<form:label path="password">Password:</form:label>
-		<form:input path="password" />
+		<form:input path="password" readonly="true" />
 		<form:errors path="password" cssClass="error" />
 		<br />
 		<form:label path="birthday">Birthday:</form:label>
