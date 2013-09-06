@@ -2,7 +2,6 @@ package rs.code9.videostore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -23,7 +22,7 @@ public class Movie extends AbstractBaseEntity {
 	private String genre;
 	
 	@NotEmpty(message = "This field is required!")
-	private String descripiton;
+	private String description;
 	
 	@NotEmpty(message = "This field is required!")
 	private int year;
@@ -50,12 +49,12 @@ public class Movie extends AbstractBaseEntity {
 	}
 
 	@Column(name = "description")
-	public String getDescripiton() {
-		return descripiton;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescripiton(String descripiton) {
-		this.descripiton = descripiton;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	

@@ -10,4 +10,5 @@ public interface AdminService {
 
 	public List<Movie> findMovieByName(String name);
 
+	public Movie getMovieById(Long id);
 }
