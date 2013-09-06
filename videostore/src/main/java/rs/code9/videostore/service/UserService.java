@@ -1,8 +1,10 @@
 package rs.code9.videostore.service;
 
-import org.springframework.stereotype.Service;
+import rs.code9.videostore.model.User;
 
-@Service
-public class UserService {
 
+
+public interface UserService {
+	
+	public User get(Long id); 
 }
