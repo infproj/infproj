@@ -23,11 +23,7 @@ public class AdminController {
 		return("admin");
 	}
 	
-	@RequestMapping(value = "{id}", method = RequestMethod.GET)
-	public String showMovie(Model model,@PathVariable("id") long id) {
-		model.addAttribute("movie", service.getMovieById(id));
-		return ("edit-movie");
-	}
+	
 	
 
 }

@@ -3,6 +3,7 @@ package rs.code9.videostore.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -24,10 +25,10 @@ public class Movie extends AbstractBaseEntity {
 	@NotEmpty(message = "This field is required!")
 	private String description;
 	
-	@NotEmpty(message = "This field is required!")
+	@NotNull(message = "This field is required!")
 	private int year;
 	
-	@NotEmpty(message = "This field is required!")
+	@NotNull(message = "This field is required!")
 	private int stock;
 	
 	@Column(name = "name")
