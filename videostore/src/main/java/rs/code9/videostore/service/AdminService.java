@@ -1,5 +1,13 @@
 package rs.code9.videostore.service;
 
-public class AdminService {
+import java.util.List;
+
+import rs.code9.videostore.model.Movie;
+
+public interface AdminService {
+
+	public List<Movie> getAllMovies();
+
+	public List<Movie> findMovieByName(String name);
 
 }
