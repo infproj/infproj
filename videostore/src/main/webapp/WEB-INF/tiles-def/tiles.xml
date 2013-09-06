@@ -20,6 +20,11 @@
 		<put-attribute name="content" value="/WEB-INF/jsp/content/users/edit.jsp" />
 	</definition>
 	
+	<definition name="admin" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/users/edit.jsp" />
+		<put-attribute name="leftMenu" value="leftMenuAdmin" />
+	</definition>
+	
 	<definition name="leftMenu" template="/WEB-INF/jsp/layout/leftMenu.jsp">
 		<put-list-attribute name="leftMenuItems">
 			<item link="home" value="menu.left.item.home.caption" />
@@ -29,5 +34,7 @@
 			<item link="contact" value="menu.left.item.contact.caption" />
 		</put-list-attribute>
 	</definition>
+	
+	
 
 </tiles-definitions>
