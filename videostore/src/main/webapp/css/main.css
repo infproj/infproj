@@ -152,7 +152,7 @@ p.text {
 /* Table styles */
 table {
 	/* collapse borders for better display */
-	border-spacing: 0px;
+	border-spacing: 10px;
 }
 table * tr * {
 	padding: 6px 0px;
