@@ -30,7 +30,7 @@ public class User extends AbstractBaseEntity {
 	private String email;
 	
 	@NotEmpty(message = "This field is required!")
-	private Date birthday;
+	private String birthday;
 	
 	@NotEmpty(message = "This field is required!")
 	private String username;
@@ -68,11 +68,11 @@ public class User extends AbstractBaseEntity {
 	}
 
 	@Column(name = "birthday")
-	public Date getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(Date birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 

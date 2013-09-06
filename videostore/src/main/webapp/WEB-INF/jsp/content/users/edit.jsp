@@ -9,43 +9,40 @@
 			<c:url var="submitUrl" scope="page" value="/users/new" />
 		</c:when>
 		<c:otherwise>
-			<c:url var="submitUrl" scope="page" value="/users/edit" />
+			<c:url var="submitUrl" scope="page" value="/home/1" />
 		</c:otherwise>		
-	</c:choose>	
+	</c:choose>
 	<form:form action="${submitUrl}"  method="post" commandName="user" enctype="multipart/form-data">
 		 <c:if test="${not newUser}"> 
 			<form:label path="id">ID:</form:label>
 			<form:input path="id" readonly="true" />
 			<br />
 		</c:if> 
-		<form:label path="firstName">First name:</form:label>
-		<form:input path="firstName" />
-		<form:errors path="firstName" cssClass="error" />
+		<form:label path="name">First name:</form:label>
+		<form:input path="name" />
+		<form:errors path="name" cssClass="error" />
 		<br />
-		<form:label path="lastName">Last name:</form:label>
-		<form:input path="lastName" />
-		<form:errors path="lastName" cssClass="error" />
+		<form:label path="lastname">Last name:</form:label>
+		<form:input path="lastname" />
+		<form:errors path="lastname" cssClass="error" />
 		<br />
 		<form:label path="email">E-Mail:</form:label>
 		<form:input path="email" />
 		<form:errors path="email" cssClass="error" />
 		<br />
 		<form:label path="password">Password:</form:label>
-		<form:password path="password" />
+		<form:input path="password" />
 		<form:errors path="password" cssClass="error" />
 		<br />
 		<form:label path="birthday">Birthday:</form:label>
-		<form:password path="birthday" />
+		<form:input path="birthday" />
 		<form:errors path="birthday" cssClass="error" />
 		<br />
-		<c:if test="${not newUser}">
-			<c:url scope="page" var="picUrl" value="/users/${user.id}/picture" />
-			<img src="${picUrl}" alt="Profile picture" />
-			<br />
-		</c:if>
-		<label for="user.picture">Profile picture:</label>
-		<input name="user.picture" type="file" />
-		<form:errors path="picture" cssClass="error" />
+		<form:label path="username">Birthday:</form:label>
+		<form:input path="username" />
+		<form:errors path="username" cssClass="error" />
+		<br />
+		
 		
 		<input type="submit" value="Submit" />
 		<input type="button" value="Cancel" onclick="javascript:window.location.href='${newUser ? '.' : user.id}'" />

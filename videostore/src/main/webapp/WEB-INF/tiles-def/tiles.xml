@@ -34,7 +34,7 @@
 			<item link="home" value="menu.left.item.home.caption" />
 			<item link="about" value="menu.left.item.about.caption" />
 			<item link="reservations" value="menu.left.item.reservations.caption" />
-			<item link="myProfile" value="menu.left.item.myProfile.caption" />
+			<item link="home/1" value="menu.left.item.myProfile.caption" />
 			<item link="contact" value="menu.left.item.contact.caption" />
 		</put-list-attribute>
 	</definition>

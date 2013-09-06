@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import rs.code9.videostore.model.User;
 import rs.code9.videostore.repository.UserRepository;
@@ -25,12 +26,15 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User create(User user) {
-		return userRepository.save(user);
+		public synchronized void update(User user) throws IllegalArgumentException {
+			Assert.isTrue(userRepository.exists(user.getId()), "User must be in repository to update.");
+			userRepository.save(user);
+		}
+		
 	}
 	
 	
 
-}
+
 
 	
