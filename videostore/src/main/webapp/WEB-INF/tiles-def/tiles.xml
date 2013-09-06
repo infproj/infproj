@@ -16,9 +16,11 @@
 		<put-attribute name="content" value="/WEB-INF/jsp/content/home.jsp" />
 	</definition>
 	
+	<!-- USER -->
 	<definition name="edit" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/users/edit.jsp" />
 	</definition>
+	
 	<!-- ADMIN DEO -->
 	<definition name="admin" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/admin.jsp" />
