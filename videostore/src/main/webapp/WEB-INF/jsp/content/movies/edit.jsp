@@ -9,7 +9,7 @@
 			<c:url var="submitUrl" scope="page" value="/movies/new" />
 		</c:when>
 		<c:otherwise>
-			<c:url var="submitUrl" scope="page" value="/movies/edit" />
+			<c:url var="submitUrl" scope="page" value="/movies/edit/${id}" />
 		</c:otherwise>		
 	</c:choose>	
 	<form:form action="${submitUrl}"  method="post" commandName="movie">

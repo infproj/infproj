@@ -7,10 +7,13 @@ public interface MovieService {
 	
 	public Movie getMovieById(Long id);
 	
+	public Movie updateMovie(Movie movie);
+	
 	public boolean deleteMovie(Long id);
 	
 	public Movie create(Movie movie);
 	
 	public Event createEvent(Event event);
+	
 
 }
