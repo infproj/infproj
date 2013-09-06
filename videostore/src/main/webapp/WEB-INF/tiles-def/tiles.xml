@@ -29,6 +29,12 @@
 	
 	<definition name="editMovies" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/movies/edit.jsp" />
+		<put-attribute name="leftMenu" value="leftMenuAdmin" />
+	</definition>
+	
+	<definition name="editAdmins" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/users/editAdmin.jsp" />
+		<put-attribute name="leftMenu" value="leftMenuAdmin" />
 	</definition>
 	
 	<definition name="leftMenu" template="/WEB-INF/jsp/layout/leftMenu.jsp">
