@@ -20,8 +20,8 @@
 		<put-list-attribute name="leftMenuItems">
 			<item link="home" value="menu.left.item.home.caption" />
 			<item link="about" value="menu.left.item.about.caption" />
-			<item link="news" value="menu.left.item.news.caption" />
-			<item link="photo" value="menu.left.item.photo.caption" />
+			<item link="reservations" value="menu.left.item.reservations.caption" />
+			<item link="myProfile" value="menu.left.item.myProfile.caption" />
 			<item link="contact" value="menu.left.item.contact.caption" />
 		</put-list-attribute>
 	</definition>

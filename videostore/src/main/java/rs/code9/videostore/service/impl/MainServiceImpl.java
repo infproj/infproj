@@ -23,4 +23,9 @@ public class MainServiceImpl implements MainService{
 		return  repository.findAll();
 	}
 
+	@Override
+	public List<Movie> findMovieByName(String name) {
+		return repository.findByName(name);
+	}
+
 }
