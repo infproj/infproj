@@ -16,6 +16,17 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:/rs/code9/videostore/ctx/application-config.xml</param-value>
 	</context-param>
+	
+	<!-- Spring Security filter -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<!-- Spring Dispatcher Servlet  -->
 	<servlet>

@@ -1,7 +1,5 @@
 package rs.code9.videostore.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -32,8 +30,6 @@ public class User extends AbstractBaseEntity {
 	@NotEmpty(message = "This field is required!")
 	private String birthday;
 	
-	@NotEmpty(message = "This field is required!")
-	private String username;
 	
 	@NotNull
 	@Size(min = 5, max = 10, message = "Password must be between 5 and 10 characters long")
@@ -74,16 +70,6 @@ public class User extends AbstractBaseEntity {
 
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
-	}
-
-	@Column(name = "username")
-	public String getUsername() {
-		return username;
-	}
-
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	@Column(name = "password")

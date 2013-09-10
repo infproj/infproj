@@ -48,4 +48,10 @@ public class AdminServiceImpl implements AdminService {
 		return adminRepository.save(admin);
 	}
 
+	@Override
+	public Admin create(Admin admin) {
+		// TODO Auto-generated method stub
+		return adminRepository.save(admin);
+	}
+
 }

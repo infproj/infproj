@@ -38,10 +38,6 @@
 		<form:input path="password" />
 		<form:errors path="password" cssClass="error" />
 		<br />
-		<form:label path="username">Username:</form:label>
-		<form:input path="username" />
-		<form:errors path="username" cssClass="error" />
-		<br />
 		
 		<input type="submit" value="Submit" />
 		

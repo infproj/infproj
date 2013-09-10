@@ -1,9 +1,12 @@
 package rs.code9.videostore.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.Assert;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,7 +42,29 @@ public class AdminController {
 		return("editAdmins");
 	}
 	
+	@RequestMapping(value = "/new",method = RequestMethod.GET)
+	public String newAdmin(Model model){
+		model.addAttribute("admin", new Admin());
+		model.addAttribute("newAdmin",true);
+		return("newAdmin");
+	}
 	
+	@RequestMapping(value = "/new",method = RequestMethod.POST)
+	public String addNewAdmin(Model model,
+			@ModelAttribute("admin") @Valid Admin admin,
+			BindingResult result
+			){
+		if (result.hasErrors()) {
+			model.addAttribute("Admin", admin);
+			model.addAttribute("newAdmin",true);
+			return ("editAdmins");
+		}
+		@SuppressWarnings("unused")
+		Admin newAdmin = service.create(admin);
+		return ("redirect:/admin/");
+		
+	}
 	
+
 
 }

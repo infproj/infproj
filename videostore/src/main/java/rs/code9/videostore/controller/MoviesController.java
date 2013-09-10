@@ -3,6 +3,7 @@ package rs.code9.videostore.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.Assert;
@@ -73,6 +74,16 @@ public class MoviesController {
 		@SuppressWarnings("unused")
 		Movie newMovie = service.create(movie);
 		return new ModelAndView("admin");
+	}
+	
+	@RequestMapping(value = "/reservate/{id}", method = RequestMethod.POST)
+	public String reserveMovie(@ModelAttribute("movie") Movie movie, @PathVariable("id") long id) {
+		Assert.state(id == movie.getId(), "Correct ID on submission.");
+		service.updateMovie(movie);
+		
+	//	SecurityContextHolder.
+		
+		return ("redirect:/admin");
 	}
 	
 }

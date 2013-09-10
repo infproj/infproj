@@ -27,6 +27,11 @@
 		<put-attribute name="leftMenu" value="leftMenuAdmin" />
 	</definition>
 	
+	<definition name="newAdmin" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/users/editAdmin.jsp" />
+		<put-attribute name="leftMenu" value="leftMenuAdmin" />
+	</definition>
+	
 	<definition name="editMovies" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/movies/edit.jsp" />
 		<put-attribute name="leftMenu" value="leftMenuAdmin" />
@@ -56,6 +61,10 @@
 			<item link="myProfile" value="menu.left.item.myProfile.admin.caption" />
 			<item link="contact" value="menu.left.item.contact.admin.caption" />
 		</put-list-attribute>
+	</definition>
+	
+	<definition name="login" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/login.jsp" />
 	</definition>
 
 

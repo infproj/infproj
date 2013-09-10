@@ -6,6 +6,7 @@
 	<import resource="classpath:rs/code9/videostore/ctx/mvc-config.xml"/>
 	<import resource="classpath:rs/code9/videostore/ctx/service-config.xml"/>
 	<import resource="classpath:rs/code9/videostore/ctx/data-access-config.xml"/>
+	<import resource="classpath:rs/code9/videostore/ctx/security-config.xml"/>
 	
 </beans>	
 

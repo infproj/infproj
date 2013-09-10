@@ -15,5 +15,7 @@ public interface AdminService {
 	
 	public Admin getAdminById(Long id);
 	
+	public Admin create(Admin admin);
+	
 	public Admin updateAdmin(Admin admin);
 }
