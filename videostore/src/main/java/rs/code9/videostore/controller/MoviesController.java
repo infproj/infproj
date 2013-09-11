@@ -76,13 +76,14 @@ public class MoviesController {
 		return new ModelAndView("admin");
 	}
 	
-	@RequestMapping(value = "/reservate/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/reservate/{id}", method = RequestMethod.GET)
 	public String reserveMovie(@ModelAttribute("movie") Movie movie, @PathVariable("id") long id) {
 		Assert.state(id == movie.getId(), "Correct ID on submission.");
 		service.updateMovie(movie);
 		
-	//	SecurityContextHolder.
+		User u = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		
+		System.out.println(u.getId());
 		return ("redirect:/admin");
 	}
 	
