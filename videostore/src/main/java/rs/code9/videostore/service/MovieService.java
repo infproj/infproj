@@ -2,6 +2,7 @@ package rs.code9.videostore.service;
 
 import rs.code9.videostore.model.Event;
 import rs.code9.videostore.model.Movie;
+import rs.code9.videostore.model.Reserved;
 
 public interface MovieService {
 	
@@ -15,5 +16,6 @@ public interface MovieService {
 	
 	public Event createEvent(Event event);
 	
+	public Reserved reserveMovie( Reserved res);
 
 }

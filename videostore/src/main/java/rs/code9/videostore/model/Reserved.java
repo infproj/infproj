@@ -14,10 +14,11 @@ public class Reserved extends Event{
 	 * 
 	 */
 	private static final long serialVersionUID = -7819737041808034467L;
+	
 	private Date expireTime;
 
-	@Column(name = "expire_time")
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "expire_time")
 	public Date getExpireTime() {
 		return expireTime;
 	}

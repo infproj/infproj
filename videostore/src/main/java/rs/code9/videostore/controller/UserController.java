@@ -1,6 +1,8 @@
 package rs.code9.videostore.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.Assert;
@@ -31,6 +33,17 @@ public class UserController {
 		userService.update(user);
 		return ("redirect:/home/");
 	}
+	
+	@RequestMapping(value="/reservations", method = RequestMethod.GET)
+	public String getReservations(Model model){
+		
+		UserDetails userDet = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String email = userDet.getUsername();
+		System.out.println(email);
+		model.addAttribute("reservations", userService.getReservationsForEmail(email));
+		return("reservations");
+	}
+	
 	
 
 	

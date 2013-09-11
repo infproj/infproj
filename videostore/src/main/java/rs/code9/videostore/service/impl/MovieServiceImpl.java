@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 
 import rs.code9.videostore.model.Event;
 import rs.code9.videostore.model.Movie;
+import rs.code9.videostore.model.Reserved;
 import rs.code9.videostore.repository.EventRepository;
 import rs.code9.videostore.repository.MovieRepository;
+import rs.code9.videostore.repository.ReservedRepository;
 import rs.code9.videostore.service.MovieService;
 
 @Service
@@ -17,6 +19,9 @@ public class MovieServiceImpl implements MovieService {
 	
 	@Autowired
 	private EventRepository eRepository;
+	
+	@Autowired
+	private ReservedRepository reserveRepository;
 	
 	@Override
 	public Movie getMovieById(Long id) {
@@ -50,6 +55,12 @@ public class MovieServiceImpl implements MovieService {
 	public Movie updateMovie(Movie movie) {
 		
 		return repository.save(movie);
+	}
+
+	@Override
+	public Reserved reserveMovie(Reserved res) {
+		
+		return reserveRepository.save(res);
 	}
 	
 
