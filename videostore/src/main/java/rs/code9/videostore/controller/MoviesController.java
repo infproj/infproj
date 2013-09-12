@@ -1,6 +1,5 @@
 package rs.code9.videostore.controller;
 
-import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.validation.Valid;
@@ -85,6 +84,7 @@ public class MoviesController {
 		return new ModelAndView("admin");
 	}
 	
+	@SuppressWarnings("deprecation")
 	@RequestMapping(value = "/reservate/{id}", method = RequestMethod.GET)
 	public String reserveMovie(@ModelAttribute("movie") Movie movie, @PathVariable("id") long id) {
 		Assert.state(id == movie.getId(), "Correct ID on submission.");
@@ -109,7 +109,7 @@ public class MoviesController {
 		expTime.setDate(expTime.getDate()+2);		//vreme isteka rezervacije je 2 dana
 		res.setExpireTime(expTime);
 		service.reserveMovie(res);
-		return ("redirect:/admin");
+		return ("redirect:/home");
 	}
 	
 }

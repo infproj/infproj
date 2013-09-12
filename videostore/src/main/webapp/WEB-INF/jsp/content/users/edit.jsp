@@ -9,7 +9,7 @@
 			<c:url var="submitUrl" scope="page" value="/users/new" />
 		</c:when>
 		<c:otherwise>
-			<c:url var="submitUrl" scope="page" value="/home/${id}" />
+			<c:url var="submitUrl" scope="page" value="/users/${id}" />
 		</c:otherwise>		
 	</c:choose>
 	<form:form action="${submitUrl}"  method="post" commandName="user" enctype="multipart/form-data">
@@ -35,11 +35,8 @@
 		<form:input path="birthday" />
 		<form:errors path="birthday" cssClass="error" />
 		<br />
-		<form:label path="username">Birthday:</form:label>
-		<form:input path="username" />
-		<form:errors path="username" cssClass="error" />
-		<br />
-		<form:hidden path="password"/>
+		<form:label path="password"/>
+		<form:input path="password" />
 		<form:errors path="password" cssClass="error" />
 		<br />
 		

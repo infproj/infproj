@@ -8,6 +8,7 @@ import org.springframework.util.Assert;
 
 import rs.code9.videostore.model.Reserved;
 import rs.code9.videostore.model.User;
+import rs.code9.videostore.repository.ReservedRepository;
 import rs.code9.videostore.repository.UserRepository;
 import rs.code9.videostore.service.UserService;
 
@@ -16,6 +17,9 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private ReservedRepository resRepository;
 
 	@Override
 	public User get(Long id) {
@@ -42,6 +46,19 @@ public class UserServiceImpl implements UserService{
 	public List<Reserved> getReservationsForEmail(String email) {
 		
 		return userRepository.getReservationsForEmail(email);
+	}
+
+	@Override
+	public User create(User user) {
+		
+		return userRepository.save(user);
+	}
+
+	@Override
+	public void deleteReservation(Long id) {
+		
+		resRepository.delete(id);
+		
 	}
 		
 	}

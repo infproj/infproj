@@ -11,6 +11,7 @@
 				<th>Id</th>
 				<th>Movie</th>
 				<th>User</th>
+				<th>Cancel Reservation</th>
 				
 
 			</tr>
@@ -20,8 +21,9 @@
 				<tr
 					class="${(status.count % 2 == 0) ? 'even' : 'odd'}${status.last ? ' last' : ''}">
 					<td>${reservation.id}</td>
-					<td>${reservation.movie}</td>
-					<td>${reservation.user}</td>
+					<td>${reservation.movie.name}</td>
+					<td>${reservation.user.email}</td>
+					<td><a href='<c:url value="/users/cancelReservation/${reservation.id}"/>'>cancel reservation</a></td>
 
 
 				</tr>

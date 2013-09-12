@@ -33,7 +33,7 @@
 					<td>${movie.description}</td>
 					<td>${movie.year}</td>
 					<td>${movie.stock}</td>
-					<td><a href='<c:url value="/movies/rent/${movie.id}"/>'>update</a></td>
+					<td><a href='<c:url value="/movies/rent/${movie.id}"/>'>rent</a></td>
 					<td><a href='<c:url value="/movies/edit/${movie.id}"/>'>update</a></td>
 					<td><a href='<c:url value="/movies/delete/${movie.id}"/>'>delete</a></td>
 
