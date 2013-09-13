@@ -4,6 +4,8 @@ import java.util.List;
 
 import rs.code9.videostore.model.Admin;
 import rs.code9.videostore.model.Movie;
+import rs.code9.videostore.model.Reserved;
+import rs.code9.videostore.model.Taken;
 
 public interface AdminService {
 
@@ -18,4 +20,16 @@ public interface AdminService {
 	public Admin create(Admin admin);
 	
 	public Admin updateAdmin(Admin admin);
+	
+	public List<Reserved> getAllReservations();
+	
+	public Reserved getReservation(long id);
+	
+	public void saveTaken(Taken tek);
+	
+	public void deleteReservation(Reserved res);
+	
+	public List<Admin> getAllAdmins();
+	
+
 }

@@ -4,10 +4,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div id="user-list">
-	<form action="/videostore/home" method="post">
+	<form action="/videostore/admin/findMov" method="post">
 		Movie name: <input type="text" name="name"><br> 
 		<input	type="submit" value="Submit">
 	</form>
+
 	<table>
 		<thead>
 			<tr>

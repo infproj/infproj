@@ -8,6 +8,7 @@
 		Movie name: <input type="text" name="name"><br> 
 		<input	type="submit" value="Submit">
 	</form>
+	${mes }
 	<table>
 		<thead>
 			<tr>

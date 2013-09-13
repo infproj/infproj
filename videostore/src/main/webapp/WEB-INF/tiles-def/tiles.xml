@@ -31,9 +31,18 @@
 		<put-attribute name="leftMenu" value="leftMenuAdmin" />
 	</definition>
 	
+	<definition name="adminList" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/users/adminList.jsp" />
+		<put-attribute name="leftMenu" value="leftMenuAdmin" />
+	</definition>
+	
 	<definition name="newAdmin" extends="standardLayout">
 		<put-attribute name="content" value="/WEB-INF/jsp/content/users/editAdmin.jsp" />
 		<put-attribute name="leftMenu" value="leftMenuAdmin" />
+	</definition>
+	
+	<definition name="adminReservations" extends="standardLayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/content/movies/adminReservations.jsp" />
 	</definition>
 	
 	<definition name="editMovies" extends="standardLayout">
@@ -59,10 +68,11 @@
 	
 	<definition name="leftMenuAdmin" template="/WEB-INF/jsp/layout/leftMenu.jsp">
 		<put-list-attribute name="leftMenuItems">
-			<item link="home" value="menu.left.item.home.admin.caption" />
-			<item link="about" value="menu.left.item.newMovie.admin.caption" />
-			<item link="reservations" value="menu.left.item.newAdmin.admin.caption" />
-			<item link="myProfile" value="menu.left.item.myProfile.admin.caption" />
+			<item link="admin" value="menu.left.item.home.admin.caption" />
+			<item link="movies/new" value="menu.left.item.newMovie.admin.caption" />
+			<item link="admin/new" value="menu.left.item.newAdmin.admin.caption" />
+			<item link="admin/list" value="menu.left.item.myProfile.admin.caption" />
+			<item link="admin/reservations" value="menu.left.item.reservations.admin.caption" />
 			<item link="contact" value="menu.left.item.contact.admin.caption" />
 		</put-list-attribute>
 	</definition>

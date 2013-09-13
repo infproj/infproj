@@ -6,4 +6,5 @@ import rs.code9.videostore.model.Reserved;
 
 public interface ReservedRepository extends JpaRepository<Reserved, Long> {
 
+	
 }

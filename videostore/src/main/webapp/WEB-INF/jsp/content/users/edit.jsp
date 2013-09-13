@@ -35,7 +35,7 @@
 		<form:input path="birthday" />
 		<form:errors path="birthday" cssClass="error" />
 		<br />
-		<form:label path="password"/>
+		<form:label path="password">Password:</form:label>
 		<form:input path="password" />
 		<form:errors path="password" cssClass="error" />
 		<br />
